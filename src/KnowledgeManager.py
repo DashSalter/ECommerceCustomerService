@@ -33,7 +33,7 @@ class KnowledgeManager:
             embeddings=self.vector_store.embed_documents(documents)
         )
 
-    def add_after_sales(self, documents, ids=None, source=KnowledgeType.AFTER_SALES.value) -> None:
+    def add_after_sales(self, documents:list, ids=None, source=KnowledgeType.AFTER_SALES.value) -> None:
         """添加售后信息"""
         self._collection_add(documents, ids, source)
 
